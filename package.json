@@ -1,0 +1,64 @@
+{
+  "name": "vite-plugin-https",
+  "version": "1.0.0",
+  "description": "A Vite plugin that provides local HTTPS service.",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "publish:ci": "tsx scripts/publish.ts",
+    "release:prepare": "bump"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/childrentime/vite-plugin-https.git"
+  },
+  "bugs": {
+    "url": "https://github.com/childrentime/vite-plugin-https/issues"
+  },
+  "homepage": "https://github.com/childrentime/vite-plugin-https/#readme",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "https",
+    "devcert",
+    "localhost",
+    "ssl",
+    "tls",
+    "web-development",
+    "express",
+    "nodejs",
+    "secure-connection",
+    "local-development",
+    "middleware"
+  ],
+  "author": "LianWen Wu",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "@types/node": "^20.8.9",
+    "consola": "^3.2.3",
+    "tsup": "^7.2.0",
+    "tsx": "^3.14.0",
+    "vite": "^4.4.5"
+  },
+  "peerDependencies": {
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "@childrentime/devcert": "^1.2.7"
+  }
+}
