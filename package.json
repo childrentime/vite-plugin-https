@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-https",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vite plugin that provides local HTTPS service.",
   "scripts": {
     "build": "tsup",
